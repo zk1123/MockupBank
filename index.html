@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bank Account Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <h2>Bank Account Manager</h2>
+    <form id="accountForm">
+        <label>Account Number:</label>
+        <input class="inptacc" type="text" id="accountNumber" required>
+        
+        <label>Account Holder:</label>
+        <input class="inpthldr" type="text" id="accountHolder" required>
+        
+        <label>Initial Balance:</label>
+        <input class="inptblnc" type="number" id="initialBalance" required>
+        
+        <button class="crtaccbtn" type="button" onclick="createAccount()">Next</button>
+    </form>
+
+    <div id="accountDetails" class="hidden">
+        <h3>Account Details</h3>
+        <div class="Detcont">
+        <p><strong>Account Number:</strong> <span id="accNumDisplay"></span></p>
+        <p><strong>Account Holder:</strong> <span id="accHolderDisplay"></span></p>
+        <p><strong>Balance:</strong> $<span id="balanceDisplay"></span></p>
+    </div>
+        <div class="actions">
+            <input class="placeholder" type="number" id="amount" placeholder="Amount">
+            <button class="Deposit"onclick="deposit()">DEPOSIT</button>
+            <button class="Withdraw"onclick="withdraw()">WITHDRAW</button>
+        </div>
+        <p id="message"></p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
